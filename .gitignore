@@ -1,13 +1,15 @@
 # Compiled class file
 *.class
+*.properties
 
 # Log file
 *.log
+log.log*
 
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Mobile Tools for Java (J2ME) 
 .mtj.tmp/
 
 # Package Files #
@@ -18,6 +20,29 @@
 *.zip
 *.tar.gz
 *.rar
-
+*.class
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# IDEA project environment #
+*.iml
+.idea
+
+# Eclipse project environment #
+.settings
+.project
+.classpath
+.factorypath
+.springBeans
+target
+
+# Spring Tool Suits project environment #
+.sts4-cache
+/zhongshi-etc-service-rest-api-users/target
+/zhongshi-etc-service-rpc-api-users/target
+/.idea
+/zhongshi-etc-service-users/target
+/zhongshi-etc-users-do/target
+/.idea
+/zhongshi-etc-users-dto/target
+/zhongshi-etc-users-vo/target
