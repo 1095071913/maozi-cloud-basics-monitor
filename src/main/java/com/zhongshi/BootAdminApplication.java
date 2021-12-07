@@ -37,7 +37,7 @@ import de.codecentric.boot.admin.server.config.EnableAdminServer;
 public class BootAdminApplication extends BaseApplication {
 
 	public static void main(String[] args) {
-		ApplicationRun(BootAdminApplication.class);
+		ApplicationRun();
 	}
 
 }
