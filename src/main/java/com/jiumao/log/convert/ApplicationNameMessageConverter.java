@@ -1,7 +1,6 @@
-package com.zhongshi.log.convert;
+package com.jiumao.log.convert;
 
-import com.zhongshi.factory.BaseResultFactory;
-import com.zhongshi.tool.ApplicationEnvironmentConfig;
+import com.jiumao.tool.ApplicationEnvironmentConfig;
 
 import ch.qos.logback.classic.pattern.MessageConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;

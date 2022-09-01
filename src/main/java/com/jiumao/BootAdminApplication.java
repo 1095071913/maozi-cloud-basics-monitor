@@ -15,9 +15,7 @@
  * 
  */
 
-package com.zhongshi;
-
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
+package com.jiumao;
 
 /**
  * 
@@ -33,7 +31,6 @@ import de.codecentric.boot.admin.server.config.EnableAdminServer;
  *
  */
 
-@EnableAdminServer
 public class BootAdminApplication extends BaseApplication {
 
 	public static void main(String[] args) {

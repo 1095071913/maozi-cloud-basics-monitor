@@ -6,8 +6,10 @@
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
     <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
     <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
-	<conversionRule conversionWord="environment" converterClass="com.zhongshi.log.convert.EnvironmentMessageConverter" />
-	<conversionRule conversionWord="applicationName" converterClass="com.zhongshi.log.convert.ApplicationNameMessageConverter" />
+	<conversionRule conversionWord="environment" converterClass="com.jiumao.log.convert.EnvironmentMessageConverter" />
+	<conversionRule conversionWord="applicationName" converterClass="com.jiumao.log.convert.ApplicationNameMessageConverter" />
+    <springProperty scope="context" name="project.environment" source="project.environment"/>
+    <springProperty scope="context" name="spring.application.name" source="spring.application.name"/>
     
     
     
@@ -42,10 +44,10 @@
     <!-- ALL -->
     <appender name="all-log" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 文件路径 ，注意LOG_PATH是默认值,它的配置对应application.properties里的logging.path值-->
-        <file>${LOG_PATH:-./log.log}</file>
+        <file>log/log.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 文件名称 -->
-            <fileNamePattern>log-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>log/%d{yyyy-MM-dd}-log.log</fileNamePattern>
             <!-- 文件最大保存历史数量 -->
             <MaxHistory>30</MaxHistory>
         </rollingPolicy>
@@ -219,9 +221,18 @@
      
 	
 	<logger name="root" >
-		<appender-ref ref="all-log-async" />
-		<appender-ref ref="console-log-async" />
+		
+		<if condition='property("project.environment").contains("localhost")'>
+			<then>
+				<appender-ref ref="console-log-async" />
+			</then>
+			<else>
+				<appender-ref ref="all-log-async" />
+			</else>
+		</if>
+		
 		<appender-ref ref="grpc-log" /> 
+		
 	</logger>
 	
 <!--  	<logger name="com" level="INFO"> 
