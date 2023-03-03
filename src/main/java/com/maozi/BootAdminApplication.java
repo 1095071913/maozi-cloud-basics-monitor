@@ -15,7 +15,7 @@
  * 
  */
 
-package com.jiumao;
+package com.maozi;
 
 /**
  * 

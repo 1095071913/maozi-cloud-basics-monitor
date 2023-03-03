@@ -3,7 +3,6 @@
 
 # Log file
 *.log
-log.log*
 
 # BlueJ files
 *.ctxt
@@ -19,7 +18,7 @@ log.log*
 *.zip
 *.tar.gz
 *.rar
-*.class
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
@@ -37,11 +36,3 @@ target
 
 # Spring Tool Suits project environment #
 .sts4-cache
-/zhongshi-etc-service-rest-api-users/target
-/zhongshi-etc-service-rpc-api-users/target
-/.idea
-/zhongshi-etc-service-users/target
-/zhongshi-etc-users-do/target
-/.idea
-/zhongshi-etc-users-dto/target
-/zhongshi-etc-users-vo/target

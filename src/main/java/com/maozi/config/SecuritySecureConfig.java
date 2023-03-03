@@ -1,4 +1,5 @@
-//package com.jiumao.config;
+package com.maozi.config;
+//package com.maozi.config;
 //
 //import java.util.UUID;
 //

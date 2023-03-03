@@ -1,4 +1,5 @@
-//package com.jiumao.config;
+package com.maozi.config;
+//package com.maozi.config;
 //
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.security.config.annotation.web.builders.HttpSecurity;

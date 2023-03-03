@@ -6,8 +6,8 @@
     <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
     <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
     <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
-	<conversionRule conversionWord="environment" converterClass="com.jiumao.log.convert.EnvironmentMessageConverter" />
-	<conversionRule conversionWord="applicationName" converterClass="com.jiumao.log.convert.ApplicationNameMessageConverter" />
+	<conversionRule conversionWord="environment" converterClass="com.maozi.log.convert.EnvironmentMessageConverter" />
+	<conversionRule conversionWord="applicationName" converterClass="com.maozi.log.convert.ApplicationNameMessageConverter" />
     <springProperty scope="context" name="project.environment" source="project.environment"/>
     <springProperty scope="context" name="spring.application.name" source="spring.application.name"/>
     

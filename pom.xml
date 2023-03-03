@@ -1,17 +1,18 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.jiumao</groupId>
-		<artifactId>jiumao-saas-parent</artifactId>
+		<groupId>com.maozi</groupId>
+		<artifactId>maozi-cloud-parent</artifactId>
 		<version>1.5.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>jiumao-saas-basics-bootadmin</artifactId>
+	<artifactId>maozi-cloud-basics-bootadmin</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
 	<properties>
-		<application-run>com.jiumao.BootAdminApplication</application-run>
+		<application-run>com.maozi.BootAdminApplication</application-run>
 	</properties>
 
 
@@ -63,9 +64,9 @@
 
 		<!-- Project Begin -->
 		<dependency>
-			<groupId>com.jiumao</groupId>
-			<artifactId>jiumao-saas-config-mvc</artifactId>
-			<version>${jiumao-saas-config-mvc.version}</version>
+			<groupId>com.maozi</groupId>
+			<artifactId>maozi-cloud-config-mvc</artifactId>
+			<version>${maozi-cloud-config-mvc.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.cloud</groupId>
@@ -75,9 +76,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.jiumao</groupId>
-			<artifactId>jiumao-saas-service-base-run</artifactId>
-			<version>${jiumao-saas-service-base-run.version}</version>
+			<groupId>com.maozi</groupId>
+			<artifactId>maozi-cloud-service-base-run</artifactId>
+			<version>${maozi-cloud-service-base-run.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.cloud</groupId>
@@ -86,62 +87,11 @@
 			</exclusions>
 		</dependency>
 		<!-- Project Begin -->
-
-
-
-
+	
 
 	</dependencies>
-
-
-
-
-
-
-
-	<distributionManagement>
-		<repository>
-			<id>maven-releases</id>
-			<name>Nexus Release Repository</name>
-			<url>http://175.178.52.106:8081/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>maven-snapshots</id>
-			<name>Nexus Snapshot Repository</name>
-			<url>http://175.178.52.106:8081/repository/maven-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
-	<repositories>
-		<repository>
-			<id>maven-public</id>
-			<name>Nexus Repository</name>
-			<url>http://175.178.52.106:8081/repository/maven-public/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven-public</id>
-			<name>Nexus Plugin Repository</name>
-			<url>http://175.178.52.106:8081/repository/maven-public/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</pluginRepository>
-	</pluginRepositories>
-
-
-
-
-
+	
+	
 
 	<!-- boot打包 Begin -->
 	<build>
@@ -150,7 +100,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.1.5.RELEASE</version>
+				<version>3.0.2</version>
 				<configuration>
 					<mainClass>${application-run}</mainClass>
 				</configuration>
@@ -161,20 +111,6 @@
 						</goals>
 					</execution>
 				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.springframework</groupId>
-						<artifactId>springloaded</artifactId>
-						<version>1.2.6.RELEASE</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
