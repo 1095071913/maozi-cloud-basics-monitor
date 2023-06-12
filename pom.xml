@@ -6,13 +6,18 @@
 	<parent>
 		<groupId>com.maozi</groupId>
 		<artifactId>maozi-cloud-parent</artifactId>
-		<version>1.5.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>maozi-cloud-basics-bootadmin</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>maozi-cloud-basics-monitor</artifactId>
+	<version>${revision}</version>
+
 
 	<properties>
-		<application-run>com.maozi.BootAdminApplication</application-run>
+		
+		<revision>1.2.0-SNAPSHOT</revision>
+		
+		<application-run>com.maozi.MonitorApplication</application-run>
+		
 	</properties>
 
 
@@ -20,6 +25,34 @@
 
 
 	<dependencies>
+
+		<!-- Project Begin -->
+		<dependency>
+			<groupId>com.maozi</groupId>
+			<artifactId>maozi-cloud-service-base-run</artifactId>
+			<version>${maozi-cloud-service-base-run.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-starter-oauth2</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.maozi</groupId>
+			<artifactId>maozi-cloud-config-mvc</artifactId>
+			<version>${maozi-cloud-config-mvc.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.cloud</groupId>
+					<artifactId>spring-cloud-starter-oauth2</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- Project Begin -->
+		
+
 
 		<!-- SpringBoot Begin -->
 		<dependency>
@@ -60,33 +93,6 @@
 			<groupId>org.codehaus.janino</groupId>
 			<artifactId>janino</artifactId>
 		</dependency>
-
-
-		<!-- Project Begin -->
-		<dependency>
-			<groupId>com.maozi</groupId>
-			<artifactId>maozi-cloud-config-mvc</artifactId>
-			<version>${maozi-cloud-config-mvc.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-starter-oauth2</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>com.maozi</groupId>
-			<artifactId>maozi-cloud-service-base-run</artifactId>
-			<version>${maozi-cloud-service-base-run.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-starter-oauth2</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- Project Begin -->
 	
 
 	</dependencies>

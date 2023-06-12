@@ -31,7 +31,7 @@ package com.maozi;
  *
  */
 
-public class BootAdminApplication extends BaseApplication {
+public class MonitorApplication extends BaseApplication {
 
 	public static void main(String[] args) {
 		ApplicationRun();
