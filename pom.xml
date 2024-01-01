@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.maozi</groupId>
 		<artifactId>maozi-cloud-parent</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>1.0.2-SNAPSHOT</version>
 	</parent>
 	<artifactId>maozi-cloud-basics-monitor</artifactId>
 	<version>${revision}</version>
@@ -14,7 +14,11 @@
 
 	<properties>
 		
-		<revision>1.2.0-SNAPSHOT</revision>
+		<revision>1.2.1-SNAPSHOT</revision>
+
+		<maven.test.skip>true</maven.test.skip>
+		<maven.install.skip>true</maven.install.skip>
+		<maven.deploy.skip>true</maven.deploy.skip>
 		
 		<application-run>com.maozi.MonitorApplication</application-run>
 		
@@ -41,8 +45,8 @@
 		
 		<dependency>
 			<groupId>com.maozi</groupId>
-			<artifactId>maozi-cloud-config-mvc</artifactId>
-			<version>${maozi-cloud-config-mvc.version}</version>
+			<artifactId>maozi-cloud-config-web</artifactId>
+			<version>${maozi-cloud-config-web.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.cloud</groupId>
@@ -64,6 +68,11 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
 		</dependency>
 
 <!-- 		<dependency>

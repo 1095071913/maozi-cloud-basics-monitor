@@ -16,7 +16,7 @@ spring.cloud.nacos.config.server-addr=localhost:8081
 
 <br/>
 
-**服务端配置：maozi-cloud-bootadmin.yml**
+**服务端配置：maozi-cloud-monitor.yml**
 
 ```
 application-port: 8000
@@ -57,7 +57,7 @@ spring:
 
 <br/>
 
-**客户端配置：boot-admin.yml**
+**客户端配置：boot-monitor.yml**
 
 ```
 spring:  
