@@ -7,6 +7,7 @@
 		<groupId>com.maozi</groupId>
 		<artifactId>maozi-cloud-parent</artifactId>
 		<version>1.0.2-SNAPSHOT</version>
+		<relativePath/>
 	</parent>
 	<artifactId>maozi-cloud-basics-monitor</artifactId>
 	<version>${revision}</version>
