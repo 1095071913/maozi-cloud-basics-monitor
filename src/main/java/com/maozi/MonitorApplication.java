@@ -17,20 +17,6 @@
 
 package com.maozi;
 
-/**
- * 
- * 功能说明：Monitor启动
- * 
- * 功能作者：彭晋龙 ( 联系方式QQ/微信：1095071913 )
- *
- * 创建日期：2019-09-05 ：16:45:00
- * 
- * 版权归属：蓝河团队
- * ；
- * 协议说明：Apache2.0（ 文件顶端 ）
- *
- */
-
 public class MonitorApplication extends BaseApplication {
 
 	public static void main(String[] args) {

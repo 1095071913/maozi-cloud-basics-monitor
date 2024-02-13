@@ -15,7 +15,7 @@
  * 
  */
 
-package com.maozi.config;
+package com.maozi.monitor.config;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.context.annotation.Configuration;

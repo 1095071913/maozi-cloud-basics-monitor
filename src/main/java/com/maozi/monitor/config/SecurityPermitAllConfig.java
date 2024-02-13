@@ -1,4 +1,4 @@
-package com.maozi.config;
+package com.maozi.monitor.config;
 //package com.maozi.config;
 //
 //import org.springframework.context.annotation.Configuration;
